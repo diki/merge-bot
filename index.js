@@ -33,6 +33,9 @@ async function run() {
             ref: pull.branch_name
         });
 
+        console.log('checks fetched');
+        console.log(checks);
+    
         pull.compileReviews(reviews);
         pull.compileChecks(checks);
         console.log(`[data] pull (checks + reviews): ${JSON.stringify(pull)}`);
